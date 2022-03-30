@@ -1,16 +1,47 @@
-html,
-body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.nav-link-wrapper {
+  @apply p-2 hover:bg-orange-500 rounded flex items-center relative cursor-pointer;
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
+.nav-icon {
+  @apply w-5 h-5 mx-auto text-white group-hover:scale-105;
 }
 
-* {
-  box-sizing: border-box;
+.nav-text {
+  @apply opacity-0 -z-10 group-hover:opacity-100 group-hover:z-10 scale-0 group-hover:scale-100 transition-all delay-75 absolute left-10 font-bold text-orange-500  bg-[#312840] p-2 rounded;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: transparent !important;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgb(102, 100, 100);
+  /* border-radius: 50px; */
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+.hide-scroll-bar {
+  -ms-overflow-style: none;
+}
+.hide-scroll-bar::-webkit-scrollbar {
+  display: none;
+  height: 8px;
+}
+.hide-scroll-bar::-webkit-scrollbar-thumb {
+  border-radius: 50px;
+  width: 8px;
 }
