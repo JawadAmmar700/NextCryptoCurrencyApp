@@ -6,8 +6,8 @@ import Layout from "../layout"
 function MyApp({ Component, pageProps }: AppProps) {
   return (
     <MoralisProvider
-      appId="M94GJlhErMTYVY4dZTOOCfvl5X6ysZwT8lvezdYy"
-      serverUrl="https://qvqqveb02fu0.usemoralis.com:2053/server"
+      appId={`${process.env.NEXT_PUBLIC_MORALIS_ID}`}
+      serverUrl={`${process.env.NEXT_PUBLIC_MORALIS_SERVER}`}
     >
       <Layout>
         <Component {...pageProps} />
